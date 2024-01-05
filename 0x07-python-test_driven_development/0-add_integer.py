@@ -4,16 +4,16 @@
 def add_integer(a, b=98):
 
     """
-    add_integer - Adds and returns two integers
+    add_integer - function that adds two numbers
 
-    *** Floats are cast to ints before addition ***
+    *** Floats adds two integer and/or float numbers ***
 
     Args:
-        a: The first parameter.
-        b: The second parameter.
+        a: first number
+        b: second number
 
     Returns:
-    The addition of the two given numbers
+    addition of the two numbers
 
     Raises:
         - TypeError: if a or b arent integer and if int or float
@@ -23,4 +23,6 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    return int(a) + int(b)
+    a = int(a)
+    b = int(b)
+    return (a + b)
