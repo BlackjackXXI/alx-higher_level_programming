@@ -19,3 +19,10 @@ fi
 
 # Display the message
 printf "%s\n" "$message"
+
+# Test the output as per the provided example
+if [ "$message" == "You got me!" ]; then
+    exit 0
+else
+    exit 1
+fi
