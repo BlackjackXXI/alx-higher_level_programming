@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""write a Python script that fetches https://intranet.hbtn.io/status using the package urllib"""
+"""Python script that fetches https://intranet.hbtn.io/status"""
 import urllib.request
 
 if __name__ == "__main__":
