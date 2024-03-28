@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script makes a request to the server and extracts a message
 
 # Make a request to the server
 response=$(curl -s 0.0.0.0:5000/catch_me)
