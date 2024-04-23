@@ -1,7 +1,6 @@
 #!/usr/bin/node
-
-const lien = process.argv[2];
 const request = require('request');
+const lien = process.argv[2];
 
 request(lien, (err, res) => {
   if (err) console.log(err);
