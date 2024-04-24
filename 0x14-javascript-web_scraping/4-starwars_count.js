@@ -1,18 +1,23 @@
 #!/usr/bin/node
 
-let url = process.argv[2];
-let filename = process.argv[3];
-const fs = require('fs');
 const request = require('request');
 
-request(url, function (err, response, body) {
-  if (err) {
-    console.error(err);
+const apiUrl = process.argv[2];
+const characterId = '18';
+
+request(apiUrl, function (error, response, body) {
+  if (error) {
+    console.error(error);
   } else {
-    fs.writeFile(filename, body, 'utf8', function(err) {
-      if (err) {
-        console.error(err);
-      }
+    const filmsData = JSON.parse(body);
+    let count = 0;
+    filmsData.results.forEach((film) => {
+      film.characters.forEach((character) => {
+        if (character.includes(characterId)) {
+          count++;
+        }
+      });
     });
+    console.log(count);
   }
 });
